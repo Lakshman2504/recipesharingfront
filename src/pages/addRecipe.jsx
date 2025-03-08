@@ -66,7 +66,7 @@ export default function AddRecipe() {
         try {
             console.log("📡 Sending request with token:", token);
 
-            const response = await axios.post("https://recipesharingbackend-bp9e.onrender.com/api/recipes", formData, {
+            const response = await axios.post("https://recipesharingbackend-1.onrender.com/api/recipes", formData, {
                 headers: { 
                     "Content-Type": "multipart/form-data",
                     "Authorization": `Bearer ${token}`
