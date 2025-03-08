@@ -24,7 +24,7 @@ function App() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    axios.get("https://recipesharingbackend-bp9e.onrender.com/api/recipes")
+    axios.get("https://recipesharingbackend-1.onrender.com/api/recipes")
       .then(response => setRecipes(response.data))
       .catch(error => console.error("Error fetching recipes:", error));
   }, []);
