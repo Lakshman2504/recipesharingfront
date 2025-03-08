@@ -12,7 +12,7 @@ const Login = ({ setIsLoggedIn }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("https://recipesharingbackend-bp9e.onrender.com/api/auth/login", { 
+      const response = await axios.post("https://recipesharingbackend-1.onrender.com/api/auth/login", { 
         email, 
         password 
       });
