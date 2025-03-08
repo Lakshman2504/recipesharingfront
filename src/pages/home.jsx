@@ -6,7 +6,7 @@ const Home = () => {
     const [comments, setComments] = useState({});
 
     useEffect(() => {
-        axios.get("https://recipesharingbackend-bp9e.onrender.com/api/recipes")
+        axios.get("https://recipesharingbackend-1.onrender.com/api/recipes")
             .then(response => setRecipes(response.data))
             .catch(error => console.error("Error fetching recipes:", error));
     }, []);
@@ -21,7 +21,7 @@ const Home = () => {
     const addComment = (recipeId) => {
         if (!comments[recipeId]) return;
 
-        axios.post(`https://recipesharingbackend-bp9e.onrender.com/api/recipes/${recipeId}/comments`, { comment: comments[recipeId] })
+        axios.post(`https://recipesharingbackend-1.onrender.com/api/recipes/${recipeId}/comments`, { comment: comments[recipeId] })
             .then(() => {
                 alert("Comment added!");
                 setComments(prev => ({ ...prev, [recipeId]: "" }));
@@ -48,7 +48,7 @@ const Home = () => {
                         <div key={recipe._id} className="recipe-card">
                             <h2>{recipe.title}</h2>
                             {recipe.imageUrl ? (
-                                <img src={`https://recipesharingbackend-bp9e.onrender.com${recipe.imageUrl}`} 
+                                <img src={`https://recipesharingbackend-1.onrender.com${recipe.imageUrl}`} 
                                 alt={recipe.title} className="recipe-image" />
                             ) : (
                                 <p>No Image Available</p>
