@@ -15,7 +15,7 @@ const MyRecipe = () => {
             return;
         }
 
-        axios.get("https://recipesharingbackend-bp9e.onrender.com/api/recipes", {
+        axios.get("https://recipesharingbackend-1.onrender.com/api/recipes", {
             headers: { Authorization: `Bearer ${token}` }
         })
         .then(response => {
@@ -66,7 +66,7 @@ const MyRecipe = () => {
         try {
             const token = localStorage.getItem("token");
             const response = await axios.put(
-                `https://recipesharingbackend-bp9e.onrender.com/api/recipes/${editedRecipe._id}`,
+                `https://recipesharingbackend-1.onrender.com/api/recipes/${editedRecipe._id}`,
                 updatedRecipe,
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -95,7 +95,7 @@ const MyRecipe = () => {
         }
     
         try {
-            const response = await axios.delete(`https://recipesharingbackend-bp9e.onrender.com/api/recipes/${recipeId}`, {
+            const response = await axios.delete(`https://recipesharingbackend-1.onrender.com/api/recipes/${recipeId}`, {
                 headers: { Authorization: `Bearer ${token}` },  // ✅ Correct header format
             });
     
@@ -138,7 +138,7 @@ const MyRecipe = () => {
                                 <>
                                     <h2>{recipe.title}</h2>
                                     {recipe.imageUrl ? (
-                                        <img src={`https://recipesharingbackend-bp9e.onrender.com${recipe.imageUrl}`} alt={recipe.title} className="recipe-image" />
+                                        <img src={`https://recipesharingbackend-1.onrender.com${recipe.imageUrl}`} alt={recipe.title} className="recipe-image" />
                                     ) : (
                                         <p>No Image Available</p>
                                     )}
