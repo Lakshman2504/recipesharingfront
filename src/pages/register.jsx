@@ -39,7 +39,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://recipesharingbackend-bp9e.onrender.com/api/auth/register", {
+      const response = await axios.post("https://recipesharingbackend-1.onrender.com/api/auth/register", {
         username,
         email,
         password,
